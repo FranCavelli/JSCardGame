@@ -1,0 +1,431 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+#tablero {
+    height: 90%;
+    width: 100%;
+    background: #aaa;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+}
+
+#cartasJugador {
+    height: 100px;
+    width: 300px;
+    background: limegreen;
+    position: absolute;
+    bottom: 0;
+}
+
+#cartasEnemigo {
+    height: 100px;
+    width: 300px;
+    background: red;
+    position: absolute;
+}
+
+.cartas {
+    height: 140px;
+    width: 460px;
+    background: blueviolet;
+    display: flex;
+}
+
+#cartasEnemigo .cartas img {
+    border-radius: 5px;
+    margin: 5px 2.5px;
+    border: 2px solid rgb(255, 45, 45);
+}
+
+#cartasJugador .cartas img {
+    border-radius: 5px;
+    margin: 5px 2.5px;
+    cursor: pointer;
+    border: 2px solid rgb(0, 172, 0);
+}
+
+#enfrentamientoCartas {
+    width: 100%;
+    height: 150px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.carta1 {
+    background: rgba(255, 0, 0, 0.333);
+    height: 154px;
+    width: 150px;
+    margin-right: 50px;
+}
+
+.carta2 {
+    background: rgba(0, 165, 5, 0.333);
+    height: 154px;
+    width: 150px;
+    margin-left: 50px;
+}
+
+.carta1 img {
+    height: 150px;
+    width: 130px;
+    margin-left: 10px;
+    border: 2px solid rgb(172, 0, 0);
+}
+
+.carta2 img {
+    height: 150px;
+    width: 130px;
+    margin-left: 10px;
+    border: 2px solid rgb(0, 172, 0);
+}
+
+.carta2 p {
+    margin-top: -18px;
+    padding-left: 20%;
+    padding-top: 5px;
+    background: rgb(0, 172, 0);
+    color: #000;
+    font-weight: 600;
+}
+
+.carta1 p {
+    margin-top: -18px;
+    padding-left: 20%;
+    padding-top: 5px;
+    background: rgb(172, 0, 0);
+    color: #000;
+    font-weight: 600;
+}
+
+.bodyHidden {
+    overflow: hidden;
+}
+
+.loadStartPage {
+    width: 100%;
+    height: 100%;
+    background: #aaa;
+    position: fixed;
+    z-index: 50000;
+}
+
+.loadStartPage__Button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.loadStartPage__H1 {
+    margin-top: 15%;
+    display: flex;
+    align-items: center;
+    color: aliceblue;
+    justify-content: center;
+    text-decoration: underline blueviolet;
+}
+
+.loadStartPage__Button button {
+    align-items: center;
+    justify-content: center;
+    padding: 20px 30px;
+    cursor: pointer;
+    font-size: 20px;
+    color: red;
+    border: 2px solid red;
+    border-radius: 10px;
+    background: rgb(255, 223, 223);
+}
+
+.loadStartPage__Button button:hover {
+    background: rgb(255, 191, 191);
+    transition: .3s;
+}
+
+.loadStartPage__Button button:not(.hover) {
+    transition: .3s;
+}
+
+.opacity0animation {
+    animation: opacity0animation .5s;
+}
+
+@keyframes opacity0animation {
+    100% {
+        opacity: 0;
+    }
+}
+
+.cardPlayerRogue img {
+    width: 110px;
+    height: 140px;
+}
+
+.cardPlayerMage img {
+    width: 110px;
+    height: 140px;
+}
+
+.cardPlayerArcher img {
+    width: 110px;
+    height: 140px;
+}
+
+.cardPlayerKnight img {
+    width: 110px;
+    height: 140px;
+}
+
+.cardPlayerRogue {
+    width: 120px;
+    height: 230px;
+    margin-top: -80px;
+    text-align: center;
+    padding-top: 10px;
+    background: rgb(252, 237, 121);
+}
+
+
+.cardPlayerMage {
+    background: rgb(252, 237, 121);
+    width: 120px;
+    height: 230px;
+    margin-top: -80px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+
+.cardPlayerArcher {
+    background: rgb(252, 237, 121);
+    width: 120px;
+    height: 230px;
+    margin-top: -80px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.cardPlayerKnight {
+    background: rgb(252, 237, 121);
+    width: 120px;
+    height: 230px;
+    margin-top: -80px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+b {
+    color: #000;
+}
+
+.cardLife {
+    color: darkgreen;
+}
+
+.cardPlayerRogue:hover {
+    transform: translateY(-20px);
+    transition: .3s;
+}
+
+.cardPlayerRogue:not(.hover) {
+    transition: .3s;
+}
+
+.cardPlayerMage:hover {
+    transform: translateY(-20px);
+    transition: .3s;
+}
+
+.cardPlayerMage:not(.hover) {
+    transition: .3s;
+}
+
+.cardPlayerKnight:hover {
+    transform: translateY(-20px);
+    transition: .3s;
+}
+
+.cardPlayerKnight:not(.hover) {
+    transition: .3s;
+}
+
+.cardPlayerArcher:hover {
+    transform: translateY(-20px);
+    transition: .3s;
+}
+
+.cardPlayerArcher:not(.hover) {
+    transition: .3s;
+}
+
+#attackButton {
+    height: 150px;
+    width: 150px;
+}
+
+#attackButton img {
+    height: 150px;
+    width: 150px;
+    cursor: pointer;
+}
+
+#attackButton img:hover {
+    filter: drop-shadow(0px 0px 10px #000000);
+    transition: .3s;
+}
+
+#attackButton img:not(.hover) {
+    transition: .3s;
+}
+
+#chatAttack {
+    width: 300px;
+    height: 100%;
+    background: rgb(151, 151, 151);
+    left: 100px;
+    position: absolute;
+    padding-top: 100px;
+    padding-left: 10px;
+    color: #000;
+}
+
+#idPoints {
+    width: 400px;
+    height: 200px;
+    position: absolute;
+    right: 200px;
+    display: flex;
+}
+
+#idPointsEnemy {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    color: red;
+    font-weight: 900;
+    filter: drop-shadow(0px 0px 2px #000000);
+}
+
+#idPointsPlayer {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    color: green;
+    font-weight: 900;
+    filter: drop-shadow(0px 0px 2px #000000);
+}
+
+.enemyPointWin {
+    color: rgb(255, 30, 30);
+}
+
+.playerPointWin {
+    color: rgb(26, 255, 0);
+}
+
+.winnerPage {
+    width: 100%;
+    height: 100%;
+    background: #aaa;
+    position: fixed;
+    z-index: 50000;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    display: none;
+}
+
+.winnerPage h2 {
+    align-items: center;
+    font-size: 100px;
+    color: rgb(0, 255, 38);
+    display: block;
+}
+
+
+.LosePage {
+    width: 100%;
+    height: 100%;
+    background: #aaa;
+    position: fixed;
+    z-index: 50000;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    display: none;
+}
+
+.LosePage h3 {
+    align-items: center;
+    font-size: 100px;
+    color: rgb(255, 0, 0);
+    display: block;
+}
+
+.drawPage {
+    width: 100%;
+    height: 100%;
+    background: #aaa;
+    position: fixed;
+    z-index: 50000;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    display: none;
+}
+
+.drawPage h4 {
+    align-items: center;
+    font-size: 100px;
+    color: rgb(0, 76, 255);
+    display: block;
+}
+
+.resultMatch {
+    font-size: 40px;
+    color: yellow;
+    position: absolute;
+    margin-top: 350px;
+}
+
+
+.playAgain {
+    margin-top: 200px;
+    position: absolute;
+    font-size: 30px;
+    padding: 10px 20px;
+    cursor: pointer;
+    background: rgba(0, 255, 38, 0.051);
+    border: 2px solid rgb(234, 255, 0);
+    border-radius: 10px;
+}
+
+.playAgain:hover{
+    background: rgba(255, 247, 0, 0.381);
+    transition: .3s;
+}
+
+.playAgain:not(.hover){
+    transition: .3s;
+}
+
+@keyframes matchStatus {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100%;
+    }
+}

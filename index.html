@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Juego de cartas - JS</title>
+    <link rel="icon" href="media/knight.jpg">
+</head>
+<body class="bodyHidden">
+    <!---- LOAD PAGE -->
+    <div class="loadStartPage">
+        <div class="loadStartPage__H1">
+            <h1>CARD GAME IN JAVASCRIPT</h1>
+        </div>
+        <div class="loadStartPage__Button">
+            <button id="startGameButton">START GAME</button>
+        </div>
+    </div>
+    <!---- /LOAD PAGE -->
+    <div class="winnerPage">
+        <h2>VICTORY</h2>
+        <p class="resultMatch"></p>
+        <button onclick="location.reload()" class="playAgain">PLAY AGAIN</button>
+    </div>
+    <div class="LosePage">
+        <h3>DEFEAT</h3>
+        <p class="resultMatch"></p>
+        <button onclick="location.reload()" class="playAgain">PLAY AGAIN</button>
+    </div>
+    <div class="drawPage">
+        <h4>DRAW</h4>
+        <p class="resultMatch"></p>
+        <button onclick="location.reload()" class="playAgain">PLAY AGAIN</button>
+    </div>
+    <div id="tablero">
+        <div id="cartasJugador">
+            <div class="cartas" style="margin-top: -70px;margin-left: -100px;">
+            </div>
+        </div>
+        <div id="enfrentamientoCartas">
+            <div class="carta1"></div>
+            <div id="attackButton"><img onclick="MatchCards()" class="attackButton__img" src="media/attackButton.png" alt=""></div>
+            <div class="carta2"></div>
+        </div>
+        <div id="cartasEnemigo">
+            <div class="cartas" style="margin-top: 20px;margin-left: -100px;">
+                
+            </div>
+        </div>
+        <div id="chatAttack"></div>
+        <div id="idPoints">
+            <div id="idPointsEnemy">0</div>
+            <div id="idPointsPlayer">0</div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
